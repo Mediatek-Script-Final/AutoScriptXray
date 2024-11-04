@@ -15,7 +15,7 @@ echo -e "[ ${green}INFO${NC} ] Checking... "
 apt install iptables iptables-persistent -y
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Setting ntpdate"
-ntpdate pool.ntp.org 
+sudo ntpdate -s time.google.com
 timedatectl set-ntp true
 sleep 0.5
 echo -e "[ ${green}INFO$NC ] Enable chronyd"
