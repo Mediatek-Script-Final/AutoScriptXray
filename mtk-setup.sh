@@ -1,9 +1,7 @@
 #!/bin/bash
-# cari apa..?? harta tahta hanya sementara ingat masih ada kehidupan setelah kematian
-# jangan lupa sholat ingat ajal menantimu
-# dibawah ini bukan cd kaset ya
+# Script By: Dexter Eskalarte
 cd
-rm -rf setup.sh
+rm -rf mtk-setup.sh
 clear
 red='\e[1;31m'
 green='\e[0;32m'
@@ -247,6 +245,6 @@ secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
 echo " Auto reboot in 10 Seconds "
 sleep 10
-rm -rf setup.sh
+rm -rf mtk-setup.sh
 reboot
 
