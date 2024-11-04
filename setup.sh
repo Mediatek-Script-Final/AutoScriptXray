@@ -205,7 +205,7 @@ fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
 echo "======================================================================================"  | tee -a log-install.txt
-echo "     ___           ___           ___           ___           ___           ___        "  | tee -a log-install.txt
+echo "      ___           ___           ___           ___           ___           ___       "  | tee -a log-install.txt
 echo "     /\  \         /\  \         |\__\         /\  \         /\  \         /\  \      "  | tee -a log-install.txt   
 echo "    /::\  \       /::\  \        |:|  |        \:\  \       /::\  \       /::\  \     "  | tee -a log-install.txt
 echo "   /:/\:\  \     /:/\:\  \       |:|  |         \:\  \     /:/\:\  \     /:/\:\  \    "  | tee -a log-install.txt
