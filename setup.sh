@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script By: Dexter Eskalarte
 cd
-rm -rf mtk-setup.sh
+rm -rf setup.sh
 clear
 red='\e[1;31m'
 green='\e[0;32m'
@@ -204,14 +204,19 @@ gg="AM"
 fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
-echo "=================================================================="  | tee -a log-install.txt
-echo "     ██████╗ ███████╗██╗  ██╗████████╗███████╗██████╗ 
-           ██╔══██╗██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝██╔══██╗
-           ██║  ██║█████╗   ╚███╔╝    ██║   █████╗  ██████╔╝
-           ██║  ██║██╔══╝   ██╔██╗    ██║   ██╔══╝  ██╔══██╗
-           ██████╔╝███████╗██╔╝ ██╗   ██║   ███████╗██║  ██║
-           ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝"  | tee -a log-install.txt
-echo "=================================================================="  | tee -a log-install.txt
+echo "======================================================================================"  | tee -a log-install.txt
+echo "     ___           ___           ___           ___           ___           ___        "  | tee -a log-install.txt
+echo "     /\  \         /\  \         |\__\         /\  \         /\  \         /\  \      "  | tee -a log-install.txt   
+echo "    /::\  \       /::\  \        |:|  |        \:\  \       /::\  \       /::\  \     "  | tee -a log-install.txt
+echo "   /:/\:\  \     /:/\:\  \       |:|  |         \:\  \     /:/\:\  \     /:/\:\  \    "  | tee -a log-install.txt
+echo "  /:/  \:\__\   /::\~\:\  \      |:|__|__       /::\  \   /::\~\:\  \   /::\~\:\  \   "  | tee -a log-install.txt
+echo " /:/__/ \:|__| /:/\:\ \:\__\ ____/::::\__\     /:/\:\__\ /:/\:\ \:\__\ /:/\:\ \:\__\  "  | tee -a log-install.txt
+echo " \:\  \ /:/  / \:\~\:\ \/__/ \::::/~~/~       /:/  \/__/ \:\~\:\ \/__/ \/_|::\/:/  /  "  | tee -a log-install.txt
+echo "  \:\  /:/  /   \:\ \:\__\    ~~|:|~~|       /:/  /       \:\ \:\__\      |:|::/  /   "  | tee -a log-install.txt
+echo "   \:\/:/  /     \:\ \/__/      |:|  |       \/__/         \:\ \/__/      |:|\/__/    "  | tee -a log-install.txt
+echo "    \::/__/       \:\__\        |:|  |                      \:\__\        |:|  |      "  | tee -a log-install.txt
+echo "     ~~            \/__/         \|__|                       \/__/         \|__|      "  | tee -a log-install.txt
+echo "======================================================================================"  | tee -a log-install.txt
 echo ""
 echo "   >>>  Dexter Script Service & Port"  | tee -a log-install.txt
 echo "   - Mtk OpenSSH                  : 22"  | tee -a log-install.txt
@@ -235,7 +240,7 @@ echo "   - Mtk Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Mtk Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------https://t.me/phapp_devcodes-----------------------------" | tee -a log-install.txt
+echo "------------------https://t.me/phapp_devcodes---------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
@@ -247,6 +252,6 @@ secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
 echo " Auto reboot in 10 Seconds "
 sleep 10
-rm -rf mtk-setup.sh
+rm -rf setup.sh
 reboot
 
