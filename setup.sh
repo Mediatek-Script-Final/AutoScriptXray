@@ -129,7 +129,6 @@ SUB_DOMAIN=dextermtk-${sub}.netvpro.homes
 CF_ID=najmulhaque8820@gmail.com
 CF_KEY=22e242a54004b750f5deb84568b3f474febd4
 
-
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -156,7 +155,6 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-
 
 echo "Host : $SUB_DOMAIN"
 echo "IP=$SUB_DOMAIN" > /var/lib/ipvps.conf
