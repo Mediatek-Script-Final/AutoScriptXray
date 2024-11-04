@@ -10,7 +10,7 @@ function install () {
 IP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m  • DEXTER INSTALL WEBMIN •  \E[0m"
+echo -e "\E[0;100;33m        • INSTALL WEBMIN •         \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 echo ""
@@ -41,7 +41,7 @@ m-webmin
 function restart () {
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m  • DEXTER RESTART WEBMIN •  \E[0m"
+echo -e "\E[0;100;33m        • RESTART WEBMIN •         \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 echo ""
@@ -84,7 +84,7 @@ sts="${Error}"
 fi
 clear 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m    • DEXTER WEBMIN MENU •   \E[0m"
+echo -e "\E[0;100;33m          • WEBMIN MENU •          \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e " Status $sts"
