@@ -119,14 +119,14 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Use Domain Random $NC"
-echo -e "$BGreen 2. Insert Your Own Domaini $NC"
+echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
+echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp " Select 1 or 2: " dns
+read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 if test $dns -eq 1; then
 wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
-read -rp "Enter Your Domain: " dom
+read -rp "Enter Your Domain / masukan domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
 echo "$dom" > /root/scdomain
 echo "$dom" > /etc/xray/scdomain
@@ -205,31 +205,44 @@ else
 gg="AM"
 fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
-
 echo ""
-echo "   >>>  Dexter Script Service & Port"  | tee -a log-install.txt
-echo "   - Mtk OpenSSH                  : 22"  | tee -a log-install.txt
-echo "   - Mtk SSH Websocket            : 80" | tee -a log-install.txt
-echo "   - Mtk SSH SSL Websocket        : 443" | tee -a log-install.txt
-echo "   - Mtk Stunnel4                 : 222, 777" | tee -a log-install.txt
-echo "   - Mtk Dropbear                 : 109, 143" | tee -a log-install.txt
-echo "   - Mtk Badvpn                   : 7100-7900" | tee -a log-install.txt
-echo "   - Mtk Nginx                    : 81" | tee -a log-install.txt
-echo "   - Mtk Vmess WS TLS             : 443" | tee -a log-install.txt
-echo "   - Mtk Vless WS TLS             : 443" | tee -a log-install.txt
-echo "   - Mtk Trojan WS TLS            : 443" | tee -a log-install.txt
-echo "   - Mtk Shadowsocks WS TLS       : 443" | tee -a log-install.txt
-echo "   - Mtk Vmess WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Mtk Vless WS none TLS        : 80" | tee -a log-install.txt
-echo "   - Mtk Trojan WS none TLS       : 80" | tee -a log-install.txt
-echo "   - Mtk Shadowsocks WS none TLS  : 80" | tee -a log-install.txt
-echo "   - Mtk Vmess gRPC               : 443" | tee -a log-install.txt
-echo "   - Mtk Vless gRPC               : 443" | tee -a log-install.txt
-echo "   - Mtk Trojan gRPC              : 443" | tee -a log-install.txt
-echo "   - Mtk Shadowsocks gRPC         : 443" | tee -a log-install.txt
+echo "=================================================================="  | tee -a log-install.txt
+echo "      ___                                    ___         ___      "  | tee -a log-install.txt
+echo "     /  /\        ___           ___         /  /\       /__/\     "  | tee -a log-install.txt
+echo "    /  /:/_      /  /\         /__/\       /  /::\      \  \:\    "  | tee -a log-install.txt
+echo "   /  /:/ /\    /  /:/         \  \:\     /  /:/\:\      \  \:\   "  | tee -a log-install.txt
+echo "  /  /:/_/::\  /__/::\          \  \:\   /  /:/~/:/  _____\__\:\  "  | tee -a log-install.txt
+echo " /__/:/__\/\:\ \__\/\:\__   ___  \__\:\ /__/:/ /:/  /__/::::::::\ "  | tee -a log-install.txt
+echo " \  \:\ /~~/:/    \  \:\/\ /__/\ |  |:| \  \:\/:/   \  \:\~~\~~\/ "  | tee -a log-install.txt
+echo "  \  \:\  /:/      \__\::/ \  \:\|  |:|  \  \::/     \  \:\  ~~~  "  | tee -a log-install.txt
+echo "   \  \:\/:/       /__/:/   \  \:\__|:|   \  \:\      \  \:\      "  | tee -a log-install.txt
+echo "    \  \::/        \__\/     \__\::::/     \  \:\      \  \:\     "  | tee -a log-install.txt
+echo "     \__\/                       ~~~~       \__\/       \__\/ 1.0 "  | tee -a log-install.txt
+echo "=================================================================="  | tee -a log-install.txt
+echo ""
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
+echo "   - SSH Websocket            : 80" | tee -a log-install.txt
+echo "   - SSH SSL Websocket        : 443" | tee -a log-install.txt
+echo "   - Stunnel4                 : 222, 777" | tee -a log-install.txt
+echo "   - Dropbear                 : 109, 143" | tee -a log-install.txt
+echo "   - Badvpn                   : 7100-7900" | tee -a log-install.txt
+echo "   - Nginx                    : 81" | tee -a log-install.txt
+echo "   - Vmess WS TLS             : 443" | tee -a log-install.txt
+echo "   - Vless WS TLS             : 443" | tee -a log-install.txt
+echo "   - Trojan WS TLS            : 443" | tee -a log-install.txt
+echo "   - Shadowsocks WS TLS       : 443" | tee -a log-install.txt
+echo "   - Vmess WS none TLS        : 80" | tee -a log-install.txt
+echo "   - Vless WS none TLS        : 80" | tee -a log-install.txt
+echo "   - Trojan WS none TLS       : 80" | tee -a log-install.txt
+echo "   - Shadowsocks WS none TLS  : 80" | tee -a log-install.txt
+echo "   - Vmess gRPC               : 443" | tee -a log-install.txt
+echo "   - Vless gRPC               : 443" | tee -a log-install.txt
+echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
+echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "------------------https://t.me/phapp_devcodes---------------------" | tee -a log-install.txt
+echo "---------------------------t.me/givpn-----------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
