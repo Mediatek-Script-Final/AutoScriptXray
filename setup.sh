@@ -122,13 +122,13 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+echo -e "$BGreen 2. Choose Your Own Domain $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
 read -rp " Type 2 : " dns
 if test $dns -eq 1; then
 wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
-read -rp "Enter Your Domain / masukan domain : " dom
+read -rp "Enter Your Domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
 echo "$dom" > /root/scdomain
 echo "$dom" > /etc/xray/scdomain
