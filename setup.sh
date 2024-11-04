@@ -1,5 +1,7 @@
 #!/bin/bash
-# Script By: Dexter Eskalarte
+# cari apa..?? harta tahta hanya sementara ingat masih ada kehidupan setelah kematian
+# jangan lupa sholat ingat ajal menantimu
+# dibawah ini bukan cd kaset ya
 cd
 rm -rf setup.sh
 clear
@@ -117,12 +119,12 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Use Domain Random$NC"
-echo -e "$BGreen 2. Insert Your Own Domain$NC"
+echo -e "$BGreen 1. Use Domain Random $NC"
+echo -e "$BGreen 2. Insert Your Own Domaini $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp "Default 2: " dns
+read -rp " Select 1 or 2: " dns
 if test $dns -eq 1; then
-wget https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/cf && chmod +x cf && ./cf
+wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
 read -rp "Enter Your Domain: " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
@@ -203,20 +205,7 @@ else
 gg="AM"
 fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
-echo ""
-echo "======================================================================================"  | tee -a log-install.txt
-echo "      ___           ___           ___           ___           ___           ___       "  | tee -a log-install.txt
-echo "     /\  \         /\  \         |\__\         /\  \         /\  \         /\  \      "  | tee -a log-install.txt   
-echo "    /::\  \       /::\  \        |:|  |        \:\  \       /::\  \       /::\  \     "  | tee -a log-install.txt
-echo "   /:/\:\  \     /:/\:\  \       |:|  |         \:\  \     /:/\:\  \     /:/\:\  \    "  | tee -a log-install.txt
-echo "  /:/  \:\__\   /::\~\:\  \      |:|__|__       /::\  \   /::\~\:\  \   /::\~\:\  \   "  | tee -a log-install.txt
-echo " /:/__/ \:|__| /:/\:\ \:\__\ ____/::::\__\     /:/\:\__\ /:/\:\ \:\__\ /:/\:\ \:\__\  "  | tee -a log-install.txt
-echo " \:\  \ /:/  / \:\~\:\ \/__/ \::::/~~/~       /:/  \/__/ \:\~\:\ \/__/ \/_|::\/:/  /  "  | tee -a log-install.txt
-echo "  \:\  /:/  /   \:\ \:\__\    ~~|:|~~|       /:/  /       \:\ \:\__\      |:|::/  /   "  | tee -a log-install.txt
-echo "   \:\/:/  /     \:\ \/__/      |:|  |       \/__/         \:\ \/__/      |:|\/__/    "  | tee -a log-install.txt
-echo "    \::/__/       \:\__\        |:|  |                      \:\__\        |:|  |      "  | tee -a log-install.txt
-echo "     ~~            \/__/         \|__|                       \/__/         \|__|      "  | tee -a log-install.txt
-echo "======================================================================================"  | tee -a log-install.txt
+
 echo ""
 echo "   >>>  Dexter Script Service & Port"  | tee -a log-install.txt
 echo "   - Mtk OpenSSH                  : 22"  | tee -a log-install.txt
