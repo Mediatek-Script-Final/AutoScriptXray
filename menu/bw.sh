@@ -9,7 +9,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
 clear
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m                 BANDWITH MONITOR                 \e[0m"
+echo -e "\e[1;34m            DEXTER  BANDWITH MONITOR               \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e "" 
 echo -e "\e[1;35m 1 \e[0m Lihat Total Bandwith Tersisa"
@@ -24,7 +24,7 @@ echo -e "\e[1;35m 9 \e[0m Lihat Penggunaan Aktif Saat Ini"
 echo -e "\e[1;35m 10 \e[0m Lihat Trafik Penggunaan Aktif Saat Ini [5s]"
 echo -e "" 
 echo -e "\e[1;34m 0 BACK TO MENU \e[0m"
-echo -e "\e[1;34m x Keluar \e[0m"
+echo -e "\e[1;34m EXIT \e[0m"
 echo -e "" 
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e ""
@@ -34,7 +34,7 @@ case $opt in
 1)
 clear 
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m           TOTAL BANDWITH SERVER TERSISA          \e[0m"
+echo -e "\e[1;34m       DEXTER TOTAL BANDWITH SERVER REMAINING      \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e ""
 
@@ -50,7 +50,7 @@ bw
 2)
 clear 
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m            TOTAL BANDWITH SETIAP 5 MENIT         \e[0m"
+echo -e "\e[1;34m     DEXTER TOTAL BANDWITH EVERY 5 MINUTES         \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e ""
 
@@ -66,7 +66,7 @@ bw
 3)
 clear 
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m              TOTAL BANDWITH SETIAP JAM           \e[0m"
+echo -e "\e[1;34m             DEXTER TOTAL HOURLY BANDWITH         \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e ""
 
@@ -81,15 +81,15 @@ bw
 
 4)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m            TOTAL BANDWITH SETIAP HARI            \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m TOTAL DAILY BANDWITH \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -d
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -97,15 +97,15 @@ bw
 
 5)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m            TOTAL BANDWITH SETIAP BULAN •         \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m TOTAL BANDWITH EACH MONTH • \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -m
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -113,15 +113,15 @@ bw
 
 6)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m            TOTAL BANDWITH SETIAP TAHUN           \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m TOTAL BANDWITH EACH YEAR \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -y
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -129,15 +129,15 @@ bw
 
 7)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m              TOTAL BANDWITH TERTINGGI            \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m HIGHEST TOTAL BANDWITH \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -t
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -145,15 +145,15 @@ bw
 
 8)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m           STATISTIK TERPAKAI SETIAP JAM          \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m HOURLY USED STATISTICS \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -hg
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -161,16 +161,16 @@ bw
 
 9)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m               LIVE BANDWITH SAAT INI             \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m CURRENT LIVE BANDWITH \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e "\e[1;34m Press [ Ctrl+C ] To-Exit \e[0m"
 echo -e ""
 
 vnstat -l
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -178,15 +178,15 @@ bw
 
 10)
 clear 
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m           LIVE TRAFIK PENGGUNAAN BANDWITH        \e[0m"
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
+echo -e "\e[1;34m LIVE TRAFFIC BANDWITH USAGE \e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 
 vnstat -tr
 
 echo -e ""
-echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;33m ---------------------------------------- ---------\e[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 bw
@@ -201,7 +201,7 @@ exit
 ;;
 *)
 echo -e ""
-echo -e "Anda salah tekan"
+echo -e "You pressed the wrong key"
 sleep 1
 bw
 ;;
