@@ -117,11 +117,13 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Insert Your Own Domain $NC"
+echo -e "$BGreen 1. Use Domain Random$NC"
+echo -e "$BGreen 2. Insert Your Own Domain$NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp " Select 1 : " dns
-wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
-elif test $dns -eq 1; then
+read -rp "Default 2: " dns
+if test $dns -eq 1; then
+wget https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/cf && chmod +x cf && ./cf
+elif test $dns -eq 2; then
 read -rp "Enter Your Domain: " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
 echo "$dom" > /root/scdomain
