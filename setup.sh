@@ -119,10 +119,10 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
-echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+echo -e "$BGreen 1. Use Domain Random $NC"
+echo -e "$BGreen 2. Choose Your Own Domaini $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
+read -rp " Select 1 or 2 : " dns
 if test $dns -eq 1; then
 wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
@@ -242,7 +242,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/givpn-----------------------------" | tee -a log-install.txt
+echo "---------------------------https://t.me/phapp_devcodes-----------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
