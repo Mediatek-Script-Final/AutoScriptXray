@@ -5,9 +5,6 @@
 cd
 rm -rf setup.sh
 clear
-
-wget https://api-panel.xyz/dns/mtk/autodns/xxxxxx/cf && chmod +x cf && ./cf
-
 red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
@@ -118,6 +115,58 @@ sleep 2
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+
+clear
+apt install jq curl -y
+rm -rf /root/xray/scdomain
+mkdir -p /root/xray
+clear
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+DOMAIN=netvpro.homes
+SUB_DOMAIN=dextermtk-${sub}.netvpro.homes
+CF_ID=najmulhaque8820@gmail.com
+CF_KEY=22e242a54004b750f5deb84568b3f474febd4
+
+
+set -euo pipefail
+IP=$(wget -qO- ipinfo.io/ip);
+echo "Updating DNS for ${SUB_DOMAIN}..."
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+
+
+echo "Host : $SUB_DOMAIN"
+echo "IP=$SUB_DOMAIN" > /var/lib/ipvps.conf
+echo "$SUB_DOMAIN" > /root/domain
+echo "$SUB_DOMAIN" > /etc/xray/domain
+echo "$SUB_DOMAIN" > /etc/v2ray/domain
+echo "$SUB_DOMAIN" > /root/scdomain
+echo "$SUB_DOMAIN" > /root/xray/scdomain
+echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
+sleep 5
     
 #install ssh ovpn
 echo -e "\e[33m-----------------------------------\033[0m"
