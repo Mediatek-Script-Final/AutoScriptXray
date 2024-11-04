@@ -124,7 +124,7 @@ echo -e "$BGreen 2. Choose Your Own Domaini $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
 read -rp " Select 1 or 2 : " dns
 if test $dns -eq 1; then
-wget https://raw.githubusercontent.com/Mediatek-Script-Final/AutoScriptXray/refs/heads/master/ssh/cf && chmod +x cf && ./cf
+wget https://api-panel.xyz/dns/mtk/autodns/xxxxxx/cf && chmod +x cf && ./cf
 elif test $dns -eq 2; then
 read -rp "Enter Your Domain / masukan domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
