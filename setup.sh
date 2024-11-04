@@ -119,13 +119,13 @@ echo ""
 clear
 echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
-echo -e "$BGreen 1. Use Domain Random $NC"
-echo -e "$BGreen 2. Choose Your Own Domaini $NC"
-echo -e "$BYellow----------------------------------------------------------$NC"
-read -rp " Select 1 or 2 : " dns
-if test $dns -eq 1; then
-wget https://api-panel.xyz/dns/mtk/autodns/xxxxxx/cf && chmod +x cf && ./cf
-elif test $dns -eq 2; then
+#echo -e "$BGreen 1. Use Domain Random $NC"
+#echo -e "$BGreen 2. Choose Your Own Domaini $NC"
+#echo -e "$BYellow----------------------------------------------------------$NC"
+#read -rp " Select 1 or 2 : " dns
+#if test $dns -eq 1; then
+#wget https://api-panel.xyz/dns/mtk/autodns/xxxxxx/cf && chmod +x cf && ./cf
+#elif test $dns -eq 2; then
 read -rp "Enter Your Domain / masukan domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
 echo "$dom" > /root/scdomain
