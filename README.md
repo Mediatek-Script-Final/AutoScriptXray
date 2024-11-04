@@ -92,7 +92,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 ```
 
 # Telegram
-[![Telegram-chat](https://t.me/phapp_devcodes/)
+[![Telegram-chat]](https://t.me/phapp_devcodes/)
 
 # Donate
 [![PayPal donate button](https://img.shields.io/badge/Donate-PayPal-yellow)](https://paypal.me/rodenmorales)
