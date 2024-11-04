@@ -5,10 +5,10 @@ rm -rf /root/xray/scdomain
 mkdir -p /root/xray
 clear
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=api-panel.xyz
-SUB_DOMAIN=asx-${sub}.api-panel.xyz
-CF_ID=moralesroden5@gmail.com
-CF_KEY=6557c266dd16ba84158271a5351817aa17b03
+DOMAIN=netvpro.homes
+SUB_DOMAIN=asx-${sub}.netvpro.homes
+CF_ID=najmulhaque8820@gmail.com
+CF_KEY=22e242a54004b750f5deb84568b3f474febd4
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Record DNS ${SUB_DOMAIN}..."
